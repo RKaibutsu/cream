@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cream - Private Nail Salon</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<header>
+    <img src="images/top.png" alt="top" class="top" />
+</header>
+
+<div class="intro">
+    京都市西京区中山にリニューアルオープンしました<br />
+    自宅ネイルサロンです。
+</div>
+
+<section class="menu-section">
+    <h2>メニュー</h2>
+    <h4>シンプルメニュー</h4>
+    <label class="menu-item" onclick="toggleDetails(this)">
+        <span>ワンカラー▼</span>
+        <span>￥4800</span>
+    </label>
+    <div class="details">
+        ワンカラーの説明文とイメージ画像など（仮）
+        <img src="one-color.jpg" alt="ワンカラーネイル" />
+    </div>
+
+    <label class="menu-item" onclick="toggleDetails(this)">
+        <span>白爪風ワンカラーorクリア仕上げ▼</span>
+        <span>￥4500</span>
+    </label>
+    <div class="details">
+        白爪風の説明文とイメージ画像など（仮）
+    </div>
+
+    <label class="menu-item" onclick="toggleDetails(this)">
+        <span>カラーグラデーション▼</span>
+        <span>￥4800</span>
+    </label>
+    <div class="details">
+        カラーグラデーションの説明文とイメージ画像など（仮）
+    </div>
+    
+    <!-- 隠されたメニュー -->
+    <div id="moreMenu" class="hidden">
+        <label class="menu-item" onclick="toggleDetails(this)">
+            <span>ラメグラデーション▼</span>
+            <span>￥5000</span>
+        </label>
+        <div class="details">
+            ラメグラデーションの説明文とイメージ画像など（仮）
+        </div>
+
+        <label class="menu-item" onclick="toggleDetails(this)">
+            <span>ワンカラー+爪先にホロorストーン▼</span>
+            <span>￥5500</span>
+        </label>
+        <div class="details">
+            ワンカラー+爪先にホロorストーンの説明文とイメージ画像など（仮）
+        </div>
+
+        <label class="menu-item" onclick="toggleDetails(this)">
+            <span>ワンカラー+ラメ▼</span>
+            <span>￥5500</span>
+        </label>
+        <div class="details">
+            ワンカラー+ラメの説明文とイメージ画像など（仮）
+        </div>
+
+        <label class="menu-item" onclick="toggleDetails(this)">
+            <span>ワンカラー+ミラーネイル▼</span>
+            <span>￥5500</span>
+        </label>
+        <div class="details">
+            ワンカラー+ミラーネイルの説明文とイメージ画像など（仮）
+        </div>
+
+        <label class="menu-item" onclick="toggleDetails(this)">
+            <span>ワンカラー+好きな場所にパール10個▼</span>
+            <span>￥5500</span>
+        </label>
+        <div class="details">
+            ワンカラー+好きな場所にパール10個の説明文とイメージ画像など（仮）
+        </div>
+
+        <label class="menu-item" onclick="toggleDetails(this)">
+            <span>ワンカラー+好きな場所にパール10個▼</span>
+            <span>￥5500</span>
+        </label>
+        <div class="details">
+            ワンカラー+好きな場所にパール10個の説明文とイメージ画像など（仮）
+        </div>
+    </div>
+
+    <div class="view-more" onclick="toggleMenu()">view more</div>
+</section>
+
+<section class="reservation">
+    <p>
+        ご予約はこちらのQRコードから当サロンの公式アカウントを<br />
+        友達に追加した後に「予約」ボタンを押してください♡
+    </p>
+    <p>
+        <a href="https://lin.ee/iwGHfFK">公式Lineはこちらから</a>
+    </p>
+    <img src="images/qr-code.png" alt="LINE QRコード" class="qr" />
+</section>
+
+<footer>
+    <p>住所: 京都府京都市西京区大枝中山町</p>
+    <div class="footer-logo">
+        <h2>cream</h2>
+        <p>private nail salon</p>
+    </div>
+</footer>
+
+<script>
+    function toggleDetails(btn) {
+        const detail = btn.nextElementSibling;
+        if (detail.style.display === 'block') {
+            detail.style.display = 'none';
+        } else {
+            detail.style.display = 'block';
+        }
+
+        const titleSpan = btn.querySelector('span');
+        // ▼ と ▲ の切り替え
+        if (titleSpan.textContent.includes('▼')) {
+            titleSpan.textContent = titleSpan.textContent.replace('▼', '▲');
+        } else if (titleSpan.textContent.includes('▲')) {
+            titleSpan.textContent = titleSpan.textContent.replace('▲', '▼');
+        }
+    }
+
+    function toggleMenu() {
+        const moreMenu = document.getElementById('moreMenu');
+        const viewMoreBtn = document.querySelector('.view-more');
+
+        if (moreMenu.classList.contains('hidden')) {
+            moreMenu.classList.remove('hidden');
+            viewMoreBtn.textContent = 'close';
+            moreMenu.style.animation = 'fadeIn 0.3s ease-in-out';
+        } else {
+            moreMenu.classList.add('hidden');
+            viewMoreBtn.textContent = 'view more';
+        }
+    }
+</script>
+</body>
+</html>

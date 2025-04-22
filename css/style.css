@@ -1,0 +1,135 @@
+﻿body {
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdfdfd;
+    color: #333;
+}
+
+header {
+    background-color: #d9cfc7;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Cursive';
+    font-size: 3rem;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0 0;
+}
+
+.intro {
+    text-align: center;
+    margin: 2rem 1rem;
+    font-size: 1rem;
+}
+
+.menu-section {
+    padding: 1rem 15rem;
+    border-top: 1px solid #ccc;
+}
+
+.menu-section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+    transition: box-shadow 0.5s;
+}
+
+.menu-item button {
+    margin-left: 0.5rem;
+}
+
+.details {
+    display: none;
+    font-size: 0.9rem;
+    margin: 0.5rem 0 1rem 1rem;
+    animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+.view-more {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #666;
+}
+
+.reservation {
+    text-align: center;
+    padding: 2rem;
+}
+
+.top {
+    width: 100vw;       /* ビューポート幅に合わせる */
+    height: auto;       /* アスペクト比を維持 */
+    display: block;     /* 余白を防ぐ */
+    margin: 0;          /* デフォルトのマージン除去 */
+}
+
+.qr {
+    width: 120px;
+    margin-top: 1rem;
+}
+
+a:link {
+    color: #00b900;
+    text-decoration: underline;
+}
+
+a,a:visited{
+    color: #00b900;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid #ccc;
+}
+
+.footer-logo h2 {
+    font-family: cursive;
+    margin: 0.5rem 0 0;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; transform: translateY(-10px); }
+    to { opacity: 0; transform: translateY(0); }
+}
+
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    .menu-section {
+        padding: 1rem 7rem;
+    }
+    .menu-item {
+
+    }
+    .menu-item span {
+        margin-bottom: 0.5rem;
+    }
+}
