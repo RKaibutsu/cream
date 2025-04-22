@@ -74,10 +74,10 @@ header p {
 }
 
 .top {
-    width: 100vw;       /* ビューポート幅に合わせる */
+    width: 100%;       /* ビューポート幅に合わせる */
     height: auto;       /* アスペクト比を維持 */
     display: block;     /* 余白を防ぐ */
-    margin: 0;          /* デフォルトのマージン除去 */
+
 }
 
 .qr {
@@ -124,7 +124,7 @@ footer {
         font-size: 2rem;
     }
     .menu-section {
-        padding: 1rem 7rem;
+        padding: 1rem 3rem;
     }
     .menu-item {
 
