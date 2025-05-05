@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>cream - Private Nail Salon</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Klee+One&family=Sawarabi+Mincho&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+
 </head>
 <body>
 <header>
@@ -13,8 +17,48 @@
 
 <div class="intro">
     京都市西京区大枝中山町にリニューアルオープンしました<br />
-    自宅ネイルサロンです。<br />
+    自宅ネイルサロンcreamです。<br />
+    シンプルなワンカラーやグラデーションから<br />
+    画像持ち込み可なアートコースまで、<br />
+    豊富なメニューをご用意しています!<br />
+    是非ご覧くださいませ。<br />
+    <br />
     ご新規の方は全メニュー￥1000オフにさせていただきます!
+</div>
+
+<section class="gallery-section">
+    <br />
+    <h2>ギャラリー</h2>
+    <div class="gallery">
+        <img src="images/1.jpg" class="gallery-image" />
+        <img src="images/2.jpg" class="gallery-image" />
+        <img src="images/3.jpg" class="gallery-image" />
+        <img src="images/4.jpg" class="gallery-image hidden" />
+        <img src="images/5.jpg" class="gallery-image hidden" />
+        <img src="images/6.jpg" class="gallery-image hidden" />
+        <img src="images/7.jpg" class="gallery-image hidden" />
+        <img src="images/8.jpg" class="gallery-image hidden" />
+        <img src="images/9.jpg" class="gallery-image hidden" />
+        <img src="images/10.jpg" class="gallery-image hidden" />
+        <img src="images/11.jpg" class="gallery-image hidden" />
+        <img src="images/12.jpg" class="gallery-image hidden" />
+        <img src="images/13.jpg" class="gallery-image hidden" />
+        <img src="images/14.jpg" class="gallery-image hidden" />
+        <img src="images/15.jpg" class="gallery-image hidden" />
+        <img src="images/16.jpg" class="gallery-image hidden" />
+        <img src="images/17.jpg" class="gallery-image hidden" />
+        <img src="images/18.jpg" class="gallery-image hidden" />
+        <img src="images/19.jpg" class="gallery-image hidden" />
+        <img src="images/20.jpg" class="gallery-image hidden" />
+        <img src="images/21.jpg" class="gallery-image hidden" />
+    </div>
+</section>
+
+
+<div id="toggleButton" class="view-more-gallery">view more</div>
+
+<div id="overlay" class="overlay hidden">
+    <img id="overlayImage" />
 </div>
 
 <section class="menu-section">
@@ -39,7 +83,6 @@
             お色のイメージ画像持ち込み可能です<br>
             当店で対応させていただける範囲になりますがお気軽にご相談ください♡!
         </p>
-        <img src="one-color.jpg" alt="ワンカラーネイル" />
     </div>
 
     <label class="menu-item" onclick="toggleDetails(this)">
@@ -203,7 +246,6 @@
         
         <h4>画像持ち込みデザインコース</h4>
         <p class="menu-description">
-            ～説明～<br>
             当サロンがご用意できる範囲になりますが、イメージ画像持ち込み可能なメニューです<br>
             当店のサンプルからもご自由にお選びいただけます<br>
             <br>
@@ -286,20 +328,9 @@
 
         <h4>フットコース</h4>
         <p class="menu-description">
-            ～説明～<br>
             ＜フットの施術について＞<br>
             施術前にフットバスをご用意しております♡<br>
             アートに付きましては、当店が対応可能な範囲にはなりますが画像持ち込み可能です<br>
-            <br>
-            お客様のイメージを形に出来るよう、しっかりカウンセリングさせていただきながら<br>
-            一緒にデザインを作っていけたらと思っています♡<br>
-            <br>
-            デザインについてご不安な方は、ご予約の際にメッセージでイメージ画像を送っていただき、<br>
-            お気軽にご相談して頂けたらと思います!<br>
-            <br>
-            申し訳ございませんが当サロンでは、<br>
-            細かすぎるレースや細かすぎる文字などのアート・3Dキャラなどのアートは対応しかねます<br>
-            予めご了承の程よろしくお願いいたします<br>
         </p>
         <label class="menu-item" onclick="toggleDetails(this)">
             <span>ワンカラー▼</span>
@@ -517,7 +548,8 @@
     <p>
         ご予約はこちらのリンクまたはQRコードから<br />
         当サロンのLine公式アカウントを友達に追加してください。<br />
-        追加後、「予約」ボタンを押してフォームを入力してください♡
+        追加後、「予約する」ボタンを押してフォームを入力してください♡<br />
+        ご不明な点がございましたらLineからいつでもご相談ください!
     </p>
     <p>
         <a href="https://lin.ee/iwGHfFK">公式Lineはこちらから</a>
@@ -525,11 +557,25 @@
     <img src="images/qr-code.png" alt="LINE QRコード" class="qr" />
 </section>
 
+<div class="access">
+    <br />
+    <h2>アクセス</h2>
+    <p>住所: 〒610-1104 京都府京都市西京区大枝中山町10-233</p>
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d5659.302477404125!2d135.67342044892143!3d34.9755221260886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzTCsDU4JzI5LjIiTiAxMzXCsDQwJzMxLjYiRQ!5e0!3m2!1sja!2sjp!4v1746451638889!5m2!1sja!2sjp"
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</div>
+
 <footer>
-    <p>住所: 京都府京都市西京区大枝中山町10-233</p>
     <div class="footer-logo">
-        <h2>cream</h2>
-        <p>private nail salon</p>
+        <img src="images/cream_logo.png" alt="cream" class="logo" />
     </div>
 </footer>
 
@@ -564,6 +610,34 @@
             viewMoreBtn.textContent = 'view more';
         }
     }
+
+    const toggleButton = document.getElementById('toggleButton');
+    const hiddenImages = document.querySelectorAll('.gallery-image.hidden');
+    let expanded = false;
+
+    toggleButton.addEventListener('click', () => {
+        expanded = !expanded;
+        hiddenImages.forEach(img => {
+            img.classList.toggle('hidden', !expanded);
+            img.style.animation = 'fadeIn 0.3s ease-in-out';
+        });
+        toggleButton.textContent = expanded ? 'Close' : 'View More';
+    });
+
+    const overlay = document.getElementById('overlay');
+    const overlayImage = document.getElementById('overlayImage');
+
+    document.querySelectorAll('.gallery-image').forEach(img => {
+        img.addEventListener('click', () => {
+            overlayImage.src = img.src;
+            overlay.classList.remove('hidden');
+        });
+    });
+
+    overlay.addEventListener('click', () => {
+        overlay.classList.add('hidden');
+        overlayImage.src = '';
+    });
 </script>
 </body>
 </html>
